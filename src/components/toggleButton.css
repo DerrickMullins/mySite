@@ -1,0 +1,92 @@
+.switch {
+    position: absolute;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 20px;
+    right: 0;
+}
+
+.checkbox {
+    appearance: none;
+    display: none;
+}
+  
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: grey;
+    border-radius: 34px;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    transition: .4s;
+    background-color: white;
+}
+
+input:checked + .slider {
+    appearance: none;
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    appearance: none;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    transform: translateX(26px);
+}
+
+.sun-icon {
+    background-image: url('../assets/sun-2-svgrepo-com.svg');
+    top: 5px;
+    left: 5px;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    opacity: 0;
+    z-index: 1234;
+    position: absolute;
+    transition: opacity 0.1s;
+}
+
+.moon-icon {
+    background-image: url('../assets/moon-svgrepo-com.svg');
+    right: 5px;
+    top: 5px;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    opacity: 1;
+    z-index: 1234;
+    position: absolute;
+    transition: opacity 0.1s;
+}
+
+input:checked ~ .slider .sun-icon {
+    opacity: 1;
+}
+
+input:checked ~ .slider .moon-icon {
+    opacity: 0;
+}
+
+/* Rounded sliders */
+.slider.round:before {
+    border-radius: 50%;
+}
+
+@media (max-width: 720px) {
+    .slider {
+        cursor: auto;
+    }
+}
