@@ -1,6 +1,4 @@
 import './toggleButton.css'
-import moonIcon from '../assets/moon-svgrepo-com.svg'
-import sunIcon from '../assets/sun-2-svgrepo-com.svg'
 
 export default function ToggleButton({ onClick }) {
     return (
