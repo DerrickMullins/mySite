@@ -1,0 +1,34 @@
+name: Build and Deploy React App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to Raspberry Pi
+        env:
+          PI_HOST: ${{ secrets.PI_HOST }}
+          PI_USER: ${{ secrets.PI_USER }}
+          PI_PASSWORD: ${{ secrets.PI_PASSWORD }}
+        run: |
+          echo "$PI_PASSWORD" | sshpass ssh "$PI_USER@$PI_HOST" 'mkdir -p /var/www/my-react-app'
+          sshpass -p "$PI_PASSWORD" rsync -avz --delete ./build/ "$PI_USER@$PI_HOST:/var/www/mySite"
