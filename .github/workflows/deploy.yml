@@ -24,9 +24,6 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Run server.js
-        run: node server.js
-
       - name: sudo apt update
         run: sudo apt update
 
