@@ -24,14 +24,11 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Install sshpass
-        run: sudo apt-get install -y sshpass
+      - name: Run server.js
+        run: node server.js
 
-      - name: Deploy to Raspberry Pi
-        env:
-          PI_HOST: ${{ secrets.PI_HOST }}
-          PI_USER: ${{ secrets.PI_USER }}
-          PI_PASSWORD: ${{ secrets.PI_PASSWORD }}
-        run: |
-          echo "$PI_PASSWORD" | sshpass ssh -o StrictHostKeyChecking=no "$PI_USER@$PI_HOST" 'mkdir -p /var/www/my-react-app'
-          sshpass -p "$PI_PASSWORD" rsync -avz --delete ./build/ "$PI_USER@$PI_HOST:/var/www/mySite"
+      - name: sudo apt update
+        run: sudo apt update
+
+      - name: sudo /etc/init.d/nginx start
+        run: sudo /etc/init.d/nginx start
