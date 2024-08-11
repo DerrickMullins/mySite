@@ -30,7 +30,7 @@
 
 .tabButton.dark-mode{
     appearance: none;
-    background-color: purple;
+    background-color: red;
     border: 1px solid rgb(83, 1, 90);
     color: white;
     font-size: 16px;
