@@ -27,5 +27,5 @@ jobs:
       - name: sudo apt update
         run: sudo apt update
 
-      - name: sudo /etc/init.d/nginx start
-        run: sudo /etc/init.d/nginx start
+      - name: sudo systemctl restart nginx
+        run: sudo systemctl restart nginx
