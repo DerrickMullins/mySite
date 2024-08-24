@@ -103,6 +103,7 @@
 }
 
 .content {
+    width: auto;
     align-items: center;
     color: white;
     display: flex;
