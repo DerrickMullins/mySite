@@ -19,6 +19,7 @@ function App() {
   const handleSelect = (selectedButton) => {
     setSelectedContent(selectedButton)
   }
+  
 
   return (
     <div className="App">
@@ -65,7 +66,9 @@ function App() {
             </li>
           </menu>
           <div className={`content-card ${selectedTheme}`}>
-            <div className='content'>{ selectedContent ? selectedContent : "Welcome!" }</div>
+            <div className='content'>
+              {selectedContent ? (selectedContent) : (<span className="typewriter">Hi, I'm Derrick Mullins. Welcome to my site!!!</span>)}
+            </div>
           </div>
         </div>
       </div>
