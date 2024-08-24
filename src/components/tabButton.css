@@ -171,17 +171,17 @@
 
 @media (max-width: 400px) {
     .tabButton.dark-mode {
-        padding: 12px 12px;
+        padding: 8px 8px;
     }
     .tabButton.light-mode {
-        padding: 12px 12px;
+        padding: 8px 8px;
     }
 
     .active.dark-mode {
-        padding: 12px 12px;
+        padding: 8px 8px;
     }
 
     .active.light-mode {
-        padding: 12px 12px;
+        padding: 8px 8px;
     }
 }
