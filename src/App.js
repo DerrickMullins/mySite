@@ -25,9 +25,9 @@ function App() {
     <div className="App">
       <div className={`App ${selectedTheme}`}>
         <div class="button-container">
-          <a className={selectedTheme === 'dark-mode' ? 'github-button' : 'github-button-light'} href="https://github.com/DerrickMullins" target="_blank" />
-          <a className={selectedTheme === 'dark-mode' ? 'linkedin-button' : 'linkedin-button-light'} href="https://www.linkedin.com/in/derrick-mullins-446779285" target="_blank" />
-          <a className={selectedTheme === 'dark-mode' ? 'email-button' : 'email-button-light'} href="mailto:djm2382@gmail.com" target="_blank"/>
+          <a className={selectedTheme === 'dark-mode' ? 'github-button' : 'github-button-light'} href="https://github.com/DerrickMullins" target="_blank" rel="noopener" />
+          <a className={selectedTheme === 'dark-mode' ? 'linkedin-button' : 'linkedin-button-light'} href="https://www.linkedin.com/in/derrick-mullins-446779285" target="_blank" rel="noopener" />
+          <a className={selectedTheme === 'dark-mode' ? 'email-button' : 'email-button-light'} href="mailto:djm2382@gmail.com" target="_blank" rel="noopener"/>
         </div>
         <ToggleButton onClick={toggleTheme} />
         <div className="profile-container">
@@ -72,7 +72,7 @@ function App() {
           </menu>
           <div className={`content-card ${selectedTheme}`}>
             <div className='content'>
-              {selectedContent ? (selectedContent) : (<span className="typewriter">Hi, I'm Derrick Mullins. Welcome to my site!!!</span>)}
+              {selectedContent ? (selectedContent) : (<span className="typewriter">Hi, I'm Derrick Mullins!!!</span>)}
             </div>
           </div>
         </div>
