@@ -60,7 +60,7 @@ input:checked + .slider:before {
 }
 
 .moon-icon {
-    background-image: url('../assets/moon-svgrepo-com.svg');
+    background-image: url('../assets/white-moon-svgrepo-com.svg');
     right: 5px;
     top: 5px;
     width: 24px;
