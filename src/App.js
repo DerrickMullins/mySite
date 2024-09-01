@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       <div className={`App ${selectedTheme}`}>
         <div class="button-container">
-          <a className={selectedTheme === 'dark-mode' ? 'github-button' : 'github-button-light'} href="https://github.com/DerrickMullins" target="_blank" aria-label="GitHub"/>
+          <a className={selectedTheme === 'dark-mode' ? 'github-button' : 'github-button-light'} href="https://github.com/DerrickMullins" target="_blank" rel="noopener noreferrer" aria-label="GitHub"/>
           <a className={selectedTheme === 'dark-mode' ? 'linkedin-button' : 'linkedin-button-light'} href="https://www.linkedin.com/in/derrick-mullins-446779285" target="_blank" rel="noopener noreferrer" aria-label="Linkedin"/>
           <a className={selectedTheme === 'dark-mode' ? 'email-button' : 'email-button-light'} href="mailto:djm2382@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"/>
         </div>
