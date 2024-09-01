@@ -66,13 +66,13 @@ function App() {
                 isSelected={selectedContent === contentData[3].content}
                 onClick={() => handleSelect(contentData[3].content)}
               >
-                Contact
+                Website
               </TabButton>
             </li>
           </menu>
           <div className={`content-card ${selectedTheme}`}>
             <div className='content'>
-              {selectedContent ? (selectedContent) : (<span className="typewriter">Hi, I'm Derrick Mullins!!!</span>)}
+              {selectedContent ? (selectedContent) : "Hi, I'm Derrick Mullins. Welcome to my site!!!"}
             </div>
           </div>
         </div>
