@@ -71,7 +71,7 @@ input:checked + .slider:before {
     transition: opacity 0.2s;
 }
 
-input:checked ~ .slider .sun-icon {
+input:checked ~ .slider {
     opacity: 1;
 }
 
