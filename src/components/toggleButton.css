@@ -48,7 +48,6 @@ input:checked + .slider:before {
 }
 
 .sun-icon {
-    background-image: url('../assets/sun-2-svgrepo-com.svg');
     top: 5px;
     left: 5px;
     width: 24px;
