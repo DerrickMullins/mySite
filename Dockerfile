@@ -23,4 +23,5 @@ RUN npm install -g serve
 EXPOSE 8000
 
 # Start both the Express server and serve the React app
-CMD ["sh", "-c", "node server.js & serve -s build"]
+CMD ["npx", "concurrently", "node server.js", "serve -s build"]
+
