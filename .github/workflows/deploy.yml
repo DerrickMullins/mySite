@@ -24,8 +24,8 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: sudo apt update
-        run: sudo apt update
+      - name: Deploy to github pages
+        run: npm run deploy
 
       - name: sudo systemctl restart nginx
         run: sudo systemctl restart nginx
