@@ -29,6 +29,10 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Configure git to use HTTPS and the token
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
