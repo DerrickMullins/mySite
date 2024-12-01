@@ -29,10 +29,6 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Set up git remote URL with token
-        run: |
-          git remote set-url origin https://x-access-token:${{ secrets.MYSITE_PAT }}@github.com/${{ github.repository }}.git
-
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
