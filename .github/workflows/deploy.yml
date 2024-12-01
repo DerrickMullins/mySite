@@ -29,7 +29,11 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Set up git remote URL with token
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.MYSITE_PAT }}@github.com/${{ github.repository }}.git
+
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
-          GH_TOKEN: ${{ secrets.MYSITE_PAT }}  # Use the GitHub token for authentication
+          GH_TOKEN: ${{ secrets.MYSITE_PAT }}  # Use the custom PAT secret for authentication
