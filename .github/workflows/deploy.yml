@@ -22,7 +22,7 @@ jobs:
         run: |
           git config --global user.name "DerrickMullins"
           git config --global user.email "djm2382@gmail.com"
-          git config --global url.https://${{ secrets.MYSITE_PAT }}@github.com
+          git config --global credential.helper store
       - name: Install dependencies
         run: npm install
 
