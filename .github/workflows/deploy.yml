@@ -29,6 +29,7 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy to github pages
+      - name: Deploy to GitHub Pages
         run: npm run deploy
-
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token for authentication
