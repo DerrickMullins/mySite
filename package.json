@@ -1,6 +1,7 @@
 {
   "homepage": "https://DerrickMullins.github.io/mySite",
   "name": "my-app",
+  "homepage": "https://DerrickMullins.github.io/mySite",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,6 +15,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
