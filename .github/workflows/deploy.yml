@@ -1,3 +1,25 @@
+Skip to content
+Navigation Menu
+DerrickMullins
+/
+mySite
+
+Type / to search
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+Build and Deploy React App
+adding github workflow #50
+Jobs
+Run details
+Workflow file for this run
+.github/workflows/deploy.yml at fc80453
 name: Build and Deploy React App
 
 on:
@@ -22,14 +44,17 @@ jobs:
         run: |
           git config --global user.name "DerrickMullins"
           git config --global user.email "djm2382@gmail.com"
-
       - name: Install dependencies
         run: npm install
 
       - name: Build project
         run: npm run build
 
+      - name: Set up git remote URL with token
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.MYSITE_PAT }}@github.com/${{ github.repository }}.git
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
           GH_TOKEN: ${{ secrets.MYSITE_PAT }}  # Use the custom PAT secret for authentication
+adding github workflow · DerrickMullins/mySite@fc80453
