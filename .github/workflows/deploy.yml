@@ -26,4 +26,4 @@ jobs:
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
-          GH_TOKEN: ${{ secrets.MYSITE_PAT }}  # Provide the token as an environment variable
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Provide the token as an environment variable
