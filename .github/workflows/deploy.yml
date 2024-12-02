@@ -16,10 +16,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'  # Specify the Node.js version
-      
-      - name: Set up remote url
-        run:  git remote set-url origin https://$derrickmullins:${{ secrets.GH_TOKEN }}@github.com/derrickmullins/mySite.git
 
+      # This step sets the remote URL to include the GitHub token
+      - name: Set up remote URL for deployment
+        run: git remote set-url origin https://$GITHUB_ACTOR:${{ secrets.GH_TOKEN }}@github.com/$GITHUB_ACTOR/mySite.git
 
       - name: Install dependencies
         run: npm install
