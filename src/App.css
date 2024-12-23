@@ -44,13 +44,13 @@
 .github-button {
   height: 25px;
   width: 25px;
-  background-image: url('../src/assets/github-svgrepo-com.svg');
+  background-image: url('../src/assets/github-svgrepo-com-light-1.svg');
 }
 
 .github-button-light {
   height: 25px;
   width: 25px;
-  background-image: url('../src/assets/black-github.svg');
+  background-image: url('../src/assets/github-svgrepo-com-dark.svg');
 }
 
 .linkedin-button {
@@ -62,7 +62,7 @@
 .linkedin-button-light {
   height: 30px;
   width: 30px;
-  background-image: url('../src/assets/black-white-linkedin.svg');
+  background-image: url('../src/assets/linkedin-svgrepo-com-1.svg');
 }
 
 .email-button {
