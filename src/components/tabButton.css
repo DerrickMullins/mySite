@@ -44,8 +44,8 @@
 .tabButton.light-mode {
     appearance: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-    background-color: lightskyblue;
-    border: 1px solid lightskyblue;
+    background-color: #282c34;
+    border: 1px solid #282c34;
     color: white;
     font-size: 16px;
     padding: 15px 32px;
@@ -98,7 +98,7 @@
 }
 
 .content-card.light-mode {
-    background-color: lightskyblue;
+    background-color: #282c34;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
 
@@ -143,8 +143,8 @@
     .tabButton.light-mode {
         appearance: none;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-        background-color: lightskyblue;
-        border: 1px solid lightskyblue;
+        background-color: #282c34;
+        border: 1px solid #282c34;
         font-size: 14px;
         padding: 15px 15px;
         border-radius: 12px;

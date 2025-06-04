@@ -1,9 +1,20 @@
 .profile-container {
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 100vh;
     flex-direction: column;
+}
+
+.display-profile {
+    opacity: 1; /* Makes it fully visible */
+    pointer-events: auto; /* Allows clicks/interactions when visible */
+    transition: opacity 1.5s ease-in-out; /* Smooth transition */
+}
+
+.hide-profile {
+    opacity: 0; /* Makes it completely transparent */
+    pointer-events: none; /* Prevents clicks/interactions when invisible */
+    transition: opacity 1.5s ease-in-out; /* Smooth transition over 0.5 seconds */
 }
 
 .profile-image {
