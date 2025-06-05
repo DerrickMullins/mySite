@@ -88,7 +88,7 @@ function App() {
                           isSelected={selectedContent === contentData[3].content}
                           onClick={() => handleSelect(contentData[3].content)}
                       >
-                          Website
+                          Hobbies
                       </TabButton>
                   </li>
               </menu>
