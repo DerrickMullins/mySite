@@ -15,7 +15,6 @@ const Typewriter = ({ header, text, typingSpeed = 150, onTypingComplete, selecte
             return () => clearTimeout(timer);
 
         } else if (charIndex === text.length && !typingDone) {
-            // Typing complete
             setTypingDone(true);
             if (onTypingComplete) {
                 onTypingComplete();
