@@ -31,7 +31,13 @@ jobs:
           git config --global user.name "DerrickMullins"
           git config --global user.email "djm2382@gmail.com"
 
-      - name: Deploy to GitHub Pages
-        run: npm run deploy
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Provide the token as an environment variable
+      # - name: Deploy to GitHub Pages
+      #   run: npm run deploy
+      #   env:
+      #     GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          publish_dir: ./docs
