@@ -26,6 +26,11 @@ jobs:
       - name: Build the React app
         run: npm run build
 
+      - name: Set Git user identity
+        run: |
+          git config --global user.name "DerrickMullins"
+          git config --global user.email "djm2382@gmail.com"
+
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
