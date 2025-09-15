@@ -3,18 +3,19 @@
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    justify-content: center;
 }
 
 .display-profile {
-    opacity: 1; /* Makes it fully visible */
-    pointer-events: auto; /* Allows clicks/interactions when visible */
-    transition: opacity 1.5s ease-in-out; /* Smooth transition */
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 1.5s ease-in-out;
 }
 
 .hide-profile {
-    opacity: 0; /* Makes it completely transparent */
-    pointer-events: none; /* Prevents clicks/interactions when invisible */
-    transition: opacity 1.5s ease-in-out; /* Smooth transition over 0.5 seconds */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.5s ease-in-out;
 }
 
 .profile-image {

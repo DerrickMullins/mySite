@@ -39,7 +39,6 @@ function App() {
   
 
   return (
-    <div className="App">
       <div className={`App ${selectedTheme}`}>
           <Typewriter
               header="Derrick Mullins"
@@ -99,7 +98,6 @@ function App() {
               </div>
           </main>
       </div>
-    </div>
   );
 }
 
