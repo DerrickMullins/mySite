@@ -1,9 +1,18 @@
 .profile-container {
     display: flex;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 6.25rem;
+}
+
+.typewriter-profile-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     justify-content: center;
+    align-items: center;
 }
 
 .display-profile {
@@ -27,7 +36,7 @@
 /* Media query for tablets and larger */
 @media (min-width: 768px) {
     .profile-container {
-        height: 100vh;
+        min-height: 100%;
     }
 }
 
@@ -35,12 +44,12 @@
 @media (max-width: 720px) {
     .profile-container {
         width: 100vw;
-        height: 100vh;
+        min-height: 100%;
     }
 
     .profile-image {
         border-radius: 50%;
-        height: 250px;
-        width: 250px;
+        height: 300px;
+        width: 300px;
     }
 }

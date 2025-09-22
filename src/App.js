@@ -9,11 +9,10 @@ import './components/styles.css'
 import Typewriter from './components/typewriter';
 import './components/typewriter.css'
 
-
 function App() {
   const [selectedContent, setSelectedContent] = useState(false)
   const [selectedTheme, setSelectedTheme] = useState('dark-mode')
-  const [profileImageIsVisible, setprofileImageIsVisible] = useState(false)
+  const [profileImageIsVisible, setProfileImageIsVisible] = useState(false)
 
   const toggleTheme = () => {
     setSelectedTheme(selectedTheme === 'dark-mode' ? 'light-mode' : 'dark-mode')
@@ -26,33 +25,37 @@ function App() {
   useEffect(() => {
     handleSelect(contentData[0].content)
     const imageTarget = document.querySelector('.profile-container')
-    window.addEventListener('scroll', (event) => {
-      const imageRect = imageTarget.getBoundingClientRect().top
-      if (imageRect <= window.innerHeight) {
-        setprofileImageIsVisible(true)
-      }
-      if (imageRect >= window.innerHeight) {
-        setprofileImageIsVisible(false)
-      }
-    })
+    const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setProfileImageIsVisible(true)
+                }
+            })
+        },
+        {
+            threshold: .25,
+        }
+    )
+    observer.observe(imageTarget)
   }, [])
+    
   
 
   return (
       <div className={`App ${selectedTheme}`}>
-          <Typewriter
-              header="Derrick Mullins"
-              text="Hey there, welcome to my site!!!"
-              selectedTheme={selectedTheme}
-          />
           <div className="button-container">
               <a className={selectedTheme === 'dark-mode' ? 'github-button' : 'github-button-light'} href="https://github.com/DerrickMullins" target="_blank" rel="noopener noreferrer" aria-label="GitHub"/>
               <a className={selectedTheme === 'dark-mode' ? 'linkedin-button' : 'linkedin-button-light'} href="https://www.linkedin.com/in/derrick-mullins-446779285" target="_blank" rel="noopener noreferrer" aria-label="Linkedin"/>
               <a className={selectedTheme === 'dark-mode' ? 'email-button' : 'email-button-light'} href="mailto:djm2382@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"/>
           </div>
           <ToggleButton onClick={toggleTheme} />
+          <Typewriter
+              header="Derrick Mullins"
+              text="Hey there, welcome to my site!!!"
+              selectedTheme={selectedTheme}
+          />
           <main className={`profile-container ${profileImageIsVisible ? "display-profile" : "hide-profile"}`}>
-          <Profile/>
+              <Profile/>
               <menu className="horizontal-menu">
                   <li>
                       <TabButton

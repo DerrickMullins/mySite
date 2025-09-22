@@ -4,7 +4,7 @@
     height: auto;
     justify-content: center;
     list-style-type: none;
-    padding: 1rem 0 0 0;
+    padding: 0;
 }
 
 .horizontal-menu li {
@@ -166,7 +166,7 @@
     }
     
     .content-card {
-        width: 70vw;
+        max-width: 75%;
     }
 }
 
