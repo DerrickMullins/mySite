@@ -68,6 +68,10 @@
     top: 50%;
 }
 
+.active.dark-mode:hover {
+    cursor: pointer;
+}
+
 .active.light-mode {
     background-color: #2196F3;
     border: 1px solid #2196F3;
@@ -79,6 +83,10 @@
     text-align: center;
     text-decoration: none;
     top: 50%;
+}
+
+.active.light-mode:hover {
+    cursor: pointer;
 }
 
 .flex-container {
