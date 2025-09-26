@@ -50,37 +50,37 @@ html, body {
 .github-button {
   height: 25px;
   width: 25px;
-  background-image: url('../src/assets/github-svgrepo-com-light-1.svg');
+  background-image: url('../public/github-svgrepo-com-light-1.svg');
 }
 
 .github-button-light {
   height: 25px;
   width: 25px;
-  background-image: url('../src/assets/github-svgrepo-com-dark.svg');
+  background-image: url('../public/github-svgrepo-com-dark.svg');
 }
 
 .linkedin-button {
   height: 30px;
   width: 30px;
-  background-image: url('../src/assets/white-linkedin-svgrepo-com.svg');
+  background-image: url('../public/white-linkedin-svgrepo-com.svg');
 }
 
 .linkedin-button-light {
   height: 30px;
   width: 30px;
-  background-image: url('../src/assets/linkedin-svgrepo-com-1.svg');
+  background-image: url('../public/linkedin-svgrepo-com-1.svg');
 }
 
 .email-button {
   height: 25px;
   width: 25px;
-  background-image: url('../src/assets/white-email-svgrepo-com.svg');
+  background-image: url('../public/white-email-svgrepo-com.svg');
 }
 
 .email-button-light {
   height: 25px;
   width: 25px;
-  background-image: url('../src/assets/email-svgrepo-com.svg');
+  background-image: url('../public/email-svgrepo-com.svg');
 }
 
 .github-button:hover {
