@@ -54,10 +54,15 @@ function App() {
         observer.observe(imageTarget)
     }, [])
 
-
+    // scroll to top of page on page refresh
+    useEffect(() => {
+        window.history.scrollRestoration = 'manual'
+    })
 
     return (
         <div className={`App ${selectedTheme}`}>
+            <div class="scroll-progress"/>
+
             <div className="button-container">
                 <EmailOutlinedIcon fontSize='large' onClick={handleEmailClick} style={{ color: selectedTheme === "dark-mode" ? 'white' : 'black', cursor: "pointer" }} />
                 <LinkedInIcon fontSize='large' onClick={handleLinkedinClick} style={{ color: selectedTheme === "dark-mode" ? 'white' : 'black', cursor: "pointer" }} />

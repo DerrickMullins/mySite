@@ -43,6 +43,25 @@ body {
   color: #61dafb;
 }
 
+.scroll-progress {
+  position: fixed;
+  background-image: linear-gradient(to right, #8A2BE2, #00BFFF);
+
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 4px;
+  animation: scroll-progress 2s linear;
+  animation-timeline: scroll();
+  transform-origin: left
+}
+
+@keyframes scroll-progress {
+  from {
+    transform: scaleX(0)
+  }
+}
+
 .content-fade-in-wrapper {
   /* Renamed class for clarity */
   opacity: 0;
