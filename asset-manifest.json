@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.724aaf48.css",
-    "main.js": "/static/js/main.c4f6cff0.js",
+    "main.js": "/static/js/main.472adda1.js",
     "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
     "static/media/oysterMe.jpg": "/static/media/oysterMe.5f6f326958c558b7dd34.jpg",
     "static/media/white-moon-svgrepo-com.svg": "/static/media/white-moon-svgrepo-com.542a750f2da0192dbc08.svg",
     "index.html": "/index.html",
     "main.724aaf48.css.map": "/static/css/main.724aaf48.css.map",
-    "main.c4f6cff0.js.map": "/static/js/main.c4f6cff0.js.map",
+    "main.472adda1.js.map": "/static/js/main.472adda1.js.map",
     "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.724aaf48.css",
-    "static/js/main.c4f6cff0.js"
+    "static/js/main.472adda1.js"
   ]
 }
