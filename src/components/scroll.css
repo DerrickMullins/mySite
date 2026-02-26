@@ -1,0 +1,26 @@
+.scroll {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.55rem;
+    color: rgb(102, 102, 102);
+    animation: bounce 0.5s infinite alternate;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.6s ease-out, visibility 0.6s;
+}
+
+.hide-scroll {
+    opacity: 0;
+    visibility: hidden
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-30px); } /* Moves up by 30px */
+  }

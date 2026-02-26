@@ -11,7 +11,7 @@ import './components/typewriter.css'
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import ProgressBar from "react-scroll-progress-bar";
+import Scroll from './components/scroll'
 
 function App() {
     const [selectedContent, setSelectedContent] = useState(false)
@@ -39,6 +39,12 @@ function App() {
     }
 
     useEffect(() => {
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+    }, [])
+
+    useEffect(() => {
         handleSelect(contentData[0].content)
         const imageTarget = document.querySelector('.profile-container')
         const observer = new IntersectionObserver(entries => {
@@ -59,7 +65,6 @@ function App() {
 
     return (
         <div className={`App ${selectedTheme}`}>
-            <ProgressBar bgcolor={selectedTheme === 'dark-mode' ? 'purple' : 'black'}  duration='0.2'/>
             <div className="button-container">
                 <EmailOutlinedIcon fontSize='large' onClick={handleEmailClick} style={{ color: selectedTheme === "dark-mode" ? 'white' : 'black', cursor: "pointer" }} />
                 <LinkedInIcon fontSize='large' onClick={handleLinkedinClick} style={{ color: selectedTheme === "dark-mode" ? 'white' : 'black', cursor: "pointer" }} />
@@ -71,6 +76,7 @@ function App() {
                 text="Hey there, welcome to my site!!!"
                 selectedTheme={selectedTheme}
             />
+            <Scroll heading="Scroll"/>
             <main className={`profile-container ${profileImageIsVisible ? "display-profile" : "hide-profile"}`}>
                 <Profile />
                 <menu className="horizontal-menu">
