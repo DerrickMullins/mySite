@@ -1,19 +1,22 @@
 import TabButton from './tabButton'
 import React, { useEffect, useState } from 'react';
 import { contentData } from '/Users/derrickmullins/Desktop/my-site/mySite/src/data.js'
+import { useParams, useNavigate } from "react-router-dom"
 
 
 
 export default function TabNav({selectedTheme, setProfileImageIsVisible}) {
-    const [selectedContent, setSelectedContent] = useState(false)
-    //const [profileImageIsVisible, setProfileImageIsVisible] = useState(false)
+    const navigate = useNavigate();
+    const { selectedContent: urlParam } = useParams();
 
-    const handleSelect = (selectedButton) => {
-        setSelectedContent(selectedButton)
+    const activeTab = contentData.find(item => item.id === urlParam) || contentData[0];
+
+    const handleSelect = (id) => {
+        navigate(`/${id}`);
     }
 
     useEffect(() => {
-        handleSelect(contentData[0].content)
+        //handleSelect(contentData[0].content)
         const imageTarget = document.querySelector('.profile-container')
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -32,46 +35,21 @@ export default function TabNav({selectedTheme, setProfileImageIsVisible}) {
     return (
         <>
             <menu className="horizontal-menu">
-                <li>
-                    <TabButton
-                        selectedTheme={selectedTheme}
-                        isSelected={selectedContent === contentData[0].content}
-                        onClick={() => handleSelect(contentData[0].content)}
-                    >
-                        About Me
-                    </TabButton>
-                </li>
-                <li>
-                    <TabButton
-                        selectedTheme={selectedTheme}
-                        isSelected={selectedContent === contentData[1].content}
-                        onClick={() => handleSelect(contentData[1].content)}
-                    >
-                        Experience
-                    </TabButton>
-                </li>
-                <li>
-                    <TabButton
-                        selectedTheme={selectedTheme}
-                        isSelected={selectedContent === contentData[2].content}
-                        onClick={() => handleSelect(contentData[2].content)}
-                    >
-                        Education
-                    </TabButton>
-                </li>
-                <li>
-                    <TabButton
-                        selectedTheme={selectedTheme}
-                        isSelected={selectedContent === contentData[3].content}
-                        onClick={() => handleSelect(contentData[3].content)}
-                    >
-                        Hobbies
-                    </TabButton>
-                </li>
+                {contentData.map((item) => (
+                    <li key={item.id}>
+                        <TabButton
+                            selectedTheme={selectedTheme}
+                            isSelected={activeTab.id === item.id}
+                            onClick={() => handleSelect(item.id)}
+                        >
+                            {item.name}
+                        </TabButton>
+                    </li>
+                ))}
             </menu>
             <div className={`content-card ${selectedTheme}`}>
                 <div className='content'>
-                    {selectedContent}
+                    {activeTab.content}
                 </div>
             </div>
         </>
