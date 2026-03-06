@@ -1,5 +1,5 @@
 import TabButton from './tabButton'
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { contentData } from '/Users/derrickmullins/Desktop/my-site/mySite/src/data.js'
 import { useParams, useNavigate } from "react-router-dom"
 
@@ -16,7 +16,6 @@ export default function TabNav({selectedTheme, setProfileImageIsVisible}) {
     }
 
     useEffect(() => {
-        //handleSelect(contentData[0].content)
         const imageTarget = document.querySelector('.profile-container')
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
