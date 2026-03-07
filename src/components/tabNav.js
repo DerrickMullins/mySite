@@ -7,9 +7,9 @@ import { useParams, useNavigate } from "react-router-dom"
 
 export default function TabNav({selectedTheme, setProfileImageIsVisible}) {
     const navigate = useNavigate();
-    const { selectedContent: urlParam } = useParams();
+    const { selectedContent } = useParams();
 
-    const activeTab = contentData.find(item => item.id === urlParam) || contentData[0];
+    const activeTab = contentData.find(item => item.id === selectedContent) || contentData[0];
 
     const handleSelect = (id) => {
         navigate(`/${id}`);

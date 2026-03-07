@@ -16,7 +16,7 @@ const router = createHashRouter([
     children: [
       {
         path: '/:selectedContent',
-        element: <Navigate to="/about-me" replace />
+        element: <HomePage />
       }
     ]
   },
