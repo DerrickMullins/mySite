@@ -20,3 +20,12 @@
     height: 100%;
     color: black;
 }
+
+@media screen and (max-width: 767px) {
+    .dark-footer-font {
+        justify-content: center;
+    }
+    .light-footer-font {
+        justify-content: center;
+    }
+  }
