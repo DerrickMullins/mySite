@@ -1,0 +1,22 @@
+.footer-container {
+    height: 80px;
+    border-top: 1px solid gray;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.dark-footer-font {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: white;
+}
+
+.light-footer-font {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: black;
+}

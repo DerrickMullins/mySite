@@ -9,6 +9,7 @@ import TabNav from '../components/tabNav';
 import '../components/typewriter.css'
 import Scroll from '../components/scroll'
 import IconContainer from '../components/iconContainer';
+import Footer from '../components/footer';
 
 function HomePage() {
     const [selectedTheme, setSelectedTheme] = useState('dark-mode')
@@ -35,6 +36,7 @@ function HomePage() {
                     selectedTheme={selectedTheme}
                 />
             </main>
+            <Footer selectedTheme={selectedTheme}/>
         </div>
     );
 }
