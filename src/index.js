@@ -7,6 +7,7 @@ import { RouterProvider } from 'react-router';
 import HomePage from './pages/HomePage'
 import ProfilePage from './pages/NotFoundPage';
 import NotFoundPage from './pages/NotFoundPage';
+import { ThemeProvider } from '../src/ThemeContext.js';
 
 const router = createHashRouter([
   {
@@ -29,7 +30,9 @@ const router = createHashRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );
 

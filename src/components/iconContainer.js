@@ -1,9 +1,12 @@
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { useTheme } from '../ThemeContext';
 
 
-export default function IconContainer({selectedTheme}) {
+export default function IconContainer() {
+    const { selectedTheme } = useTheme();
+
     const handleEmailClick = () => {
         window.location.href = "mailto:djm2382@gmail.com"
     }

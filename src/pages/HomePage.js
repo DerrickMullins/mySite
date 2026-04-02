@@ -10,33 +10,26 @@ import '../components/typewriter.css'
 import Scroll from '../components/scroll'
 import IconContainer from '../components/iconContainer';
 import Footer from '../components/footer';
+import { useTheme } from '/Users/derrickmullins/Desktop/my-site/mySite/src/ThemeContext.js';
 
 function HomePage() {
-    const [selectedTheme, setSelectedTheme] = useState('dark-mode')
+    const {selectedTheme, toggleTheme} = useTheme('dark-mode')
     const [profileImageIsVisible, setProfileImageIsVisible] = useState(false)
-
-    const toggleTheme = () => {
-        setSelectedTheme(selectedTheme === 'dark-mode' ? 'light-mode' : 'dark-mode')
-    }
 
     return (
         <div className={`App ${selectedTheme}`}>
-            <IconContainer selectedTheme={selectedTheme}/>
+            <IconContainer />
             <ToggleButton onClick={toggleTheme} />
             <Typewriter
                 header="Derrick Mullins"
                 text="Hey there, welcome to my site!!!"
-                selectedTheme={selectedTheme}
             />
             <Scroll heading="Scroll"/>
             <main className={`profile-container ${profileImageIsVisible ? "display-profile" : "hide-profile"}`}>
                 <Profile />
-                <TabNav
-                    setProfileImageIsVisible={setProfileImageIsVisible}
-                    selectedTheme={selectedTheme}
-                />
+                <TabNav setProfileImageIsVisible={setProfileImageIsVisible} />
             </main>
-            <Footer selectedTheme={selectedTheme}/>
+            <Footer />
         </div>
     );
 }

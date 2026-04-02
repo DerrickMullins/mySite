@@ -2,12 +2,15 @@ import TabButton from './tabButton'
 import React, { useEffect } from 'react';
 import { contentData } from '../data.js'
 import { useParams, useNavigate } from "react-router-dom"
+import { useTheme } from '../ThemeContext';
 
 
 
-export default function TabNav({selectedTheme, setProfileImageIsVisible}) {
+export default function TabNav({setProfileImageIsVisible}) {
     const navigate = useNavigate();
     const { selectedContent } = useParams();
+    const { selectedTheme } = useTheme();
+
 
     const activeTab = contentData.find(item => item.id === selectedContent) || contentData[0];
 

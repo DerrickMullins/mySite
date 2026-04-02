@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useTheme } from '../ThemeContext';
 
-const Typewriter = ({ header, text, typingSpeed = 150, onTypingComplete, selectedTheme }) => {
+
+const Typewriter = ({ header, text, typingSpeed = 150, onTypingComplete }) => {
     const [displayedText, setDisplayedText] = useState('');
     const [charIndex, setCharIndex] = useState(0);
     const [typingDone, setTypingDone] = useState(false);
+    const { selectedTheme } = useTheme();
 
     useEffect(() => {
         if (!typingDone && charIndex < text.length) {

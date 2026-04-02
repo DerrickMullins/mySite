@@ -1,5 +1,8 @@
 import "./footer.css"
-export default function Footer({selectedTheme}) {
+import { useTheme } from '../ThemeContext';
+
+export default function Footer() {
+    const { selectedTheme } = useTheme();
     return (
         <>
             <div className="footer-container">
