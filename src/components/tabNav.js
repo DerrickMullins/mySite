@@ -1,6 +1,6 @@
 import TabButton from './tabButton'
 import React, { useEffect } from 'react';
-import { contentData } from '/Users/derrickmullins/Desktop/my-site/mySite/src/data.js'
+import { contentData } from '../data.js'
 import { useParams, useNavigate } from "react-router-dom"
 
 
