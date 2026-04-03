@@ -10,7 +10,7 @@ import '../components/typewriter.css'
 import Scroll from '../components/scroll'
 import IconContainer from '../components/iconContainer';
 import Footer from '../components/footer';
-import { useTheme } from '/Users/derrickmullins/Desktop/my-site/mySite/src/ThemeContext.js';
+import { useTheme } from '../ThemeContext.js';
 
 function HomePage() {
     const {selectedTheme, toggleTheme} = useTheme('dark-mode')
